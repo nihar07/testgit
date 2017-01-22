@@ -7,14 +7,3 @@ var http = require('http');
    res.writeHead(200, { 'Content-Type': 'text/plain' });
    res.end('Hello World\n');
  }).listen(port);
- var serviceBusService = azure.createServiceBusService();
-var message = {
-    body: 'Test message',
-    customProperties: {
-        testproperty: 'TestValue'
-    }};
-serviceBusService.sendQueueMessage('myqueue', message, function(error){
-    if(!error){
-        // message sent
-    }
-});
