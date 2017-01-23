@@ -17,9 +17,11 @@ serviceBusService.receiveQueueMessage('myqueue', function(error, receivedMessage
         console.log("message Received");// Message received and deleted
 console.log(receivedMessage);
 temp = receivedMessage.body;
+console.log(temp);
     }
 });
-
+console.log(temp);
+console.log("second print");
 var http = require('http')
  var port = process.env.PORT || 1337;
  http.createServer(function(req, res) {
